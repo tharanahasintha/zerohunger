@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Harvest</title>
+    <link rel="stylesheet" href="Projects.css">
+    <script>
+        // Show Back to Top Button when scrolling
+        window.addEventListener("scroll", function() {
+            let backToTop = document.getElementById("back-to-top");
+            if (window.scrollY > 200) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+        
+        // Smooth Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image%20(1).png" alt="Zero Hunger Logo">
+            <span>Zero Hunger</span>
+        </div>
+    </header>
+
+    <section class="project-card">
+        <div class="project-image">
+            <img src="first%20harvest.webp" alt="First Harvest">
+        </div>
+        <div class="project-content">
+            <h1>First Harvest</h1>
+            <p>The <strong>First Harvest</strong> initiative focuses on tackling hunger by directly supporting small-scale farmers and ensuring that their fresh produce reaches communities in need. 
+            The project establishes a network that connects surplus agricultural products from rural areas to urban food distribution centers. By reducing food waste and improving food accessibility, 
+            First Harvest plays a crucial role in eliminating food insecurity.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Farm-to-Table Efficiency:</strong> Ensures that fresh produce reaches food-insecure families without unnecessary delays or wastage.</li>
+            <li><strong>Support for Local Farmers:</strong> Encourages sustainable agricultural practices and provides fair trade opportunities.</li>
+            <li><strong>Food Redistribution System:</strong> Uses a combination of logistics and volunteer networks to collect and distribute food efficiently.</li>
+            <li><strong>Community Engagement:</strong> Involves local volunteers and organizations in food packaging and distribution efforts.</li>
+        </ul>
+            <ul>
+            <li><strong>Minimize Food Waste:</strong> Prevent surplus agricultural products from going to waste by redirecting them to food-insecure regions.</li>
+            <li><strong>Enhance Agricultural Sustainability:</strong> Promote eco-friendly farming techniques and fair trade practices to improve farmers' livelihoods.</li>
+            <li><strong>Strengthen Food Distribution Networks:</strong> Build partnerships with local markets, food banks, and logistics providers to ensure smooth transportation of goods.</li>
+            <li><strong>Community Empowerment:</strong> Train volunteers and local organizations in food collection, preservation, and equitable distribution.</li>
+        </ul>
+        <h3>Impact:</h3>
+        <p>Since its inception, First Harvest has successfully delivered <strong>over 500,000 pounds of fresh produce</strong> to struggling communities, supporting <strong>thousands of families</strong> while reducing food wastage.</p>
+            <a href="home.html" class="back-button">← Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Zero Hunger : Group 03 Subgroup 07</p>
+        <p><a href="pageEditor_ST1.html">Student 01 : Diyana</a></p>
+    </footer>
+
+</body>
+</html>

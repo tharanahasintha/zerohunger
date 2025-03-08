@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image%20(1).png" alt="Zero Hunger Logo">
+            <span>    Zero Hunger    </span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="userprofile.html">User profile</a></li>
+                <li><a href="sitemap.html">SiteMap</a></li>
+                <li><a href="feeedback.html">Feedback</a></li>
+
+                <li><a href="#" class="join">Join</a></li>
+                <li class="menu"><i class="fas fa-bars"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1 id="animated-title">JOIN US AND ELIMINATE WORLD HUNGER</h1>
+            <p>Make the experience of helping those in need a reality. We will provide the best opportunities for you to make an impact.</p>
+        </div>
+        <div class="hero-image">
+            <img src="image.png" alt="Helping Hands">
+        </div>
+    </section>
+
+    <section class="video-container">
+        <video autoplay muted loop id="projects-video">
+            <source src="istockphoto-1413284807-640_adpp_is.mp4" type="video/mp4">
+            
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Scrollable container -->
+        <div class="project-scroll-container">
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="first%20harvest.webp" alt="First Harvest">
+                    </div>
+                    <h3>First Harvest</h3>
+                    <button><a href="Project_01.html">Read More →</a></button>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="full%20tummies.jpeg" alt="Island with Full Tummies">
+                    </div>
+                    <h3>Island with Full Tummies</h3>
+                    <button><a href="Project_02.html">Read More →</a></button>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="colab%20with%20good%20health.png" alt="Collab with GHWB">
+                    </div>
+                    <h3>Collab with GHWB</h3>
+                    <button><a href="Project_03.html">Read More →</a></button>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="smiles%20fed.jpg" alt="Feeding Smiles Initiative">
+                    </div>
+                    <h3>Feeding Smiles Initiative</h3>
+                    <button><a href="Project_04.html">Read More →</a></button>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="tenth%20project%20success.png" alt="Farm to Table Program">
+                    </div>
+                    <h3>Farm to Table Program</h3>
+                    <button>Read More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="yt-video">
+    <iframe src="https://www.youtube.com/embed/ifCQ4LqT8G8" allowfullscreen></iframe>
+</div>
+
+</iframe>
+
+
+    <footer>
+        <p>© 2025 Zero Hunger : Group 03 Subgroup 07</p>
+        <p><a href="pageEditor_ST1.html">Student 01 : Nimuthu</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let title = document.getElementById("animated-title");
+            let text = title.innerText;
+            title.innerHTML = "";
+
+            text.split("").forEach((char, index) => {
+                let span = document.createElement("span");
+                span.innerText = char;
+                span.style.animationDelay = `${index * 0.05}s`;
+                title.appendChild(span);
+            });
+        });
+    </script>
+</body>
+</html>

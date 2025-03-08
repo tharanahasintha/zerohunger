@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Distribution Table</title>
+    <link rel="stylesheet" href="home_styles.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="table_styles.css"> <!-- Table-Specific Styles -->
+</head>
+<body>
+
+    <!-- Header (Same as Home Page) -->
+    <header>
+        <div class="logo">
+            <img src="image%20(1).png" alt="Zero Hunger Logo">
+            <span>Zero Hunger</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="table.html" class="active">Table</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="userprofile.html">User profile</a></li>
+                <li><a href="sitemap.html">SiteMap</a></li>
+                <li><a href="feeedback.html">Feedback</a></li>
+
+                <li><a href="#" class="join">Join</a></li>
+                <li class="menu"><i class="fas fa-bars"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay muted loop id="table-video">
+            <source src="istockphoto-1459015085-640_adpp_is.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Table Section -->
+    <section class="table-section">
+        <h1 class="table-title">Food Distribution Overview</h1>
+        <p class="table-subtitle">Tracking our impact in different regions</p>
+
+        <!-- Filters -->
+        <div class="filter-container">
+            <label for="location-filter">Filter by Location:</label>
+            <select id="location-filter" onchange="filterTable()">
+                <option value="all">All Locations</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Miami">Miami</option>
+            </select>
+
+            <label for="date-filter">Filter by Date:</label>
+            <input type="date" id="date-filter" onchange="filterTable()">
+
+            <label for="sort-meals">Sort by Meals Provided:</label>
+            <select id="sort-meals" onchange="sortTable()">
+                <option value="default">Default</option>
+                <option value="asc">Lowest to Highest</option>
+                <option value="desc">Highest to Lowest</option>
+            </select>
+        </div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table id="food-table">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Families Helped</th>
+                        <th>Meals Provided</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-location="Sri Lanka" data-date="2025-03-01">
+                        <td>Sri Lanka</td>
+                        <td>500</td>
+                        <td>1500</td>
+                        <td>2025-03-01</td>
+                    </tr>
+                    <tr data-location="Kenya" data-date="2025-03-03">
+                        <td>Kenya</td>
+                        <td>650</td>
+                        <td>2000</td>
+                        <td>2025-03-03</td>
+                    </tr>
+                    <tr data-location="Congo" data-date="2025-03-05">
+                        <td>Congo</td>
+                        <td>400</td>
+                        <td>1200</td>
+                        <td>2025-03-05</td>
+                    </tr>
+                    <tr data-location="Sri Lanka #2 " data-date="2025-03-08">
+                        <td>Sri Lanka #2 </td>
+                        <td>700</td>
+                        <td>2500</td>
+                        <td>2025-03-08</td>
+                    </tr>
+                    <tr data-location="Sri Lanka #3 " data-date="2025-03-10">
+                        <td>Sri Lanka #3 </td>
+                        <td>300</td>
+                        <td>900</td>
+                        <td>2025-03-10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Zero Hunger : Group 03 Subgroup 07</p>
+        <p><a href="pageEditor_ST1.html">Student 01 : Nimuthu</a></p>
+    </footer>
+
+    <script src="table_script.js"></script>
+
+</body>
+</html>

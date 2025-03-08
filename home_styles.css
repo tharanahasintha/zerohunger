@@ -1,0 +1,410 @@
+/* Global Styles */
+body {
+    font-family: Trebuchet MS;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+    background-color: #d19090;
+}
+
+/* Header */v
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #617333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/* General Style for Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Hover Effect */
+nav ul li a:not(.join)::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff7f50, #ff5722);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* Text Color and Background Expand on Hover */
+nav ul li a:not(.join):hover::before {
+    transform: scaleX(1);
+}
+
+nav ul li a:not(.join):hover {
+    color: #ff7f50;
+}
+
+/* Active Page Highlight */
+nav ul li a.active {
+    background: linear-gradient(to right, #ff7f50, #ff5722);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Special Style for "Join" Button */
+nav ul li a.join {
+    background: #fbb040;
+    padding: 10px 20px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* "Join" Button Hover Effect */
+nav ul li a.join:hover {
+    background: #ff7f50;
+    transform: scale(1.1);
+}
+
+.menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('image%20(2).png') no-repeat center/cover;
+    color: #ac3b17;
+    position: relative;
+}
+
+/* Adding an overlay effect */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency */
+    filter: blur(20px); /* Increase for stronger blur effect */
+    border-radius: 50px; /* Creates blurred corners */
+    z-index: 1;
+}
+
+/* Ensure the text and image are above the translucent overlay */
+.hero-text, .hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-text {
+    width: 50%;
+}
+
+/* Hero Section Text Animation */
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 1s ease-out forwards;
+}
+
+/* Hero Section Paragraph Animation */
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 1s ease-out 0.5s forwards;
+}
+
+/* Pop-up Keyframes */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* Project Section */
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Project Card */
+.project-card {
+    flex: 0 0 auto;
+    width: 550px; /* Increase width */
+    text-align: center;
+    padding: 20px;
+    background: #d0adad;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-50px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add a hover effect to project images */
+.project-image {
+    width: 100%; /* Make it fit the card width */
+    height: 180px; /* Increase height */
+    background: #b48484;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+
+.project-card:hover .project-image {
+    opacity: 0.8;
+}
+
+/* Button Hover Effect */
+button {
+    background-color: #654d28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+#animated-title {
+    font-size: 3.5rem; /* Increase size */
+    font-weight: 800; /* Make it bolder */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff5722, #054a32); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Apply gradient effect */
+    text-shadow: 4px 4px 10px rgba(255, 127, 80, 0.5); /* Soft glow */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+.video-container {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+    margin-top:50ps;
+}
+
+#projects-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 0;
+}
+
+.projects {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.project-card {
+    background: #c18686;
+    margin:15px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+/* Scrollable Project Section */
+.project-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #ff7f50 transparent; /* For Firefox */
+}
+
+/* Hide Scrollbar for WebKit Browsers */
+.project-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-scroll-container::-webkit-scrollbar-thumb {
+    background: #ff7f50;
+    border-radius: 10px;
+}
+
+.project-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Adjust Project Cards for Horizontal Scrolling */
+.projects {
+    display: inline-flex;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-align: center;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    color: darkgreen;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container */
+    border-radius: 10px;
+}
+
+/* YouTube Video Section */
+.yt-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 50px; /* Adds space between projects and video */
+    background: #617333; /* Background color for the video section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.yt-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    transform: translate(-50%, -50%); /* Center the iframe */
+    border: none; /* Remove default iframe border */
+    border-radius: 10px; /* Rounded corners for the video */
+}
+.project-scroll-container {
+    padding-bottom: 50px; /* Creates space below projects */
+}
+
+.yt-video {
+    padding-top: 50px; /* Creates space above YouTube video */
+}
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+	<header>
+        <div class="logo">
+            <img src="image%20(1).png" alt="Zero Hunger Logo">
+            <span>    Zero Hunger    </span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="userprofile.html">User profile</a></li>
+                <li><a href="sitemap.html">SiteMap</a></li>
+                <li><a href="feeedback.html" class="active">Feedback</a></li>
+
+                <li><a href="#" class="join">Join</a></li>
+                <li class="menu"><i class="fas fa-bars"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <section class = "Feedback">
+		<div class="feedback-container">
+			<h1>Feedback Form</h1>
+			<form id="feedbackForm">
+				<fieldset>
+					<legend>Personal Details</legend>
+					<label for="fullName">Full Name:</label>
+					<input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+
+					<label for="email">Email Address:</label>
+					<input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+					<label for="phone">Telephone Number:</label>
+					<input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+					<label for="address">Address:</label>
+					<textarea id="address" name="address" placeholder="Enter your address"></textarea>
+				</fieldset>
+
+				<fieldset>
+					<legend>Feedback Details</legend>
+					<label for="comment">Your Feedback:</label>
+					<textarea id="comment" name="comment" required placeholder="Write your feedback here..."></textarea>
+
+					<label>How satisfied are you with our services?</label>
+					<div class="rating">
+						<input type="radio" name="rating" value="1">
+						<span>1</span>
+						<input type="radio" name="rating" value="2">
+						<span>2</span>
+						<input type="radio" name="rating" value="3">
+						<span>3</span>
+						<input type="radio" name="rating" value="4">
+						<span>4</span>
+						<input type="radio" name="rating" value="5">
+						<span>5</span>
+						
+					</div>
+
+					<label>Would you recommend our services?</label>
+					<div class="recommendation">
+						<input type="radio" name="recommend" value="yes">
+						<span>Yes</span>					
+						<input type="radio" name="recommend" value="no">
+						<span>No</span>
+					</div>
+                    <div class = "sentemail">
+						<label for="updates">Would you like to receive updates?</label>
+						<input type="checkbox" id="updates" name="updates"> Yes, via Email
+					</div>
+					
+				</fieldset>
+
+				<button type="submit">Submit Feedback</button>
+				<button type="reset">Cancel</button>
+			</form>
+		</div>
+	</section>
+	<footer>
+        <p>© 2025 Zero Hunger : Group 03 Subgroup 07</p>
+        <p><a href="pageEditor_ST1.html">Student 01 : Kavidu</a></p>
+    </footer>	
+</body>
+</html>

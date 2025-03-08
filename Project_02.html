@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island with Full Tummies</title>
+    <link rel="stylesheet" href="Projects.css">
+    <script>
+        window.addEventListener("scroll", function() {
+            let backToTop = document.getElementById("back-to-top");
+            if (window.scrollY > 200) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image%20(1).png" alt="Zero Hunger Logo">
+            <span>Zero Hunger</span>
+        </div>
+    </header>
+
+    <section class="project-card">
+        <div class="project-image">
+            <img src="full%20tummies.jpeg" alt="Island with Full Tummies">
+        </div>
+        <div class="project-content">
+            <h1>Island with Full Tummies</h1>
+            <p>The <strong>Island with Full Tummies</strong> project is designed to address food scarcity in isolated and hard-to-reach island communities. 
+            Many island populations suffer from limited food access due to transportation challenges, high costs, and environmental factors. 
+            This project aims to create a reliable food supply system using sustainable agriculture, local fisheries, and community-driven distribution networks.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Sustainable Food Production:</strong> Encourages islanders to grow their own food using hydroponics, vertical farming, and local fisheries.</li>
+            <li><strong>Strategic Food Supply Chains:</strong> Establishes partnerships with mainland food suppliers to ensure steady deliveries of essential items.</li>
+            <li><strong>Emergency Food Aid:</strong> Provides nutritional support during natural disasters, storms, and economic crises.</li>
+            <li><strong>Education & Awareness:</strong> Conducts workshops on nutrition, food preservation, and sustainable farming to enhance community resilience.</li>
+        </ul>
+            <h3>Objectives:</h3>
+        <ul>
+            <li><strong>Promote Local Food Sources:</strong> Support islanders in growing crops using sustainable farming techniques such as hydroponics and aquaponics.</li>
+            <li><strong>Improve Supply Chains:</strong> Establish reliable food transportation routes and storage facilities to reduce food spoilage.</li>
+            <li><strong>Emergency Food Assistance:</strong> Provide disaster relief packages with essential food supplies during hurricanes, tsunamis, and other crises.</li>
+            <li><strong>Education & Awareness:</strong> Conduct workshops on nutrition, food safety, and efficient farming practices.</li>
+        </ul>
+        <h3>Impact:</h3>
+        <p>More than <strong>25 island communities</strong> have benefited from this initiative, leading to a <strong>40% increase</strong> in local food production and a significant reduction in dependency on external food sources.</p>
+
+            <a href="home.html" class="back-button">← Back to Home</a>
+        </div>
+    </section>
+
+    <button id="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+
+    <footer>
+        <p>© 2025 Zero Hunger : Group 03 Subgroup 07</p>
+        <p><a href="pageEditor_ST2.html">Student 02 : Nimuthu</a></p>
+    </footer>
+
+</body>
+</html>
